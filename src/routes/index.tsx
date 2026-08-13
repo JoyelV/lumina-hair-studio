@@ -62,17 +62,17 @@ function Index() {
       </nav>
 
       {/* Hero */}
-      <section className="relative flex h-screen flex-col items-center justify-center overflow-hidden px-8">
+      <section className="relative flex h-screen flex-col items-center justify-end overflow-hidden px-8 pb-28">
         <div className="animate-light absolute inset-0 z-0">
           <img
             src={heroSerum}
             alt="Dark glass LUXÉOL hair repair serum bottle lit in a charcoal studio"
             width={1920}
             height={1088}
-            className="h-full w-full object-cover opacity-80"
+            className="h-full w-full object-cover object-top"
           />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_45%,transparent_20%,rgba(12,12,12,0.75)_75%)]" />
         </div>
+        <div className="absolute inset-x-0 bottom-0 z-0 h-[70%] bg-[linear-gradient(to_top,rgba(12,12,12,0.97)_18%,rgba(12,12,12,0.75)_45%,transparent_100%)]" />
 
         <div className="animate-reveal relative z-10 space-y-8 text-center">
           <div className="space-y-3">
@@ -94,6 +94,7 @@ function Index() {
             Secure Allocation
           </a>
         </div>
+
 
         <div className="absolute bottom-12 left-1/2 h-12 w-px -translate-x-1/2 bg-foreground/20" />
       </section>

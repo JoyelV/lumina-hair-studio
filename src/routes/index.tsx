@@ -69,7 +69,7 @@ function Index() {
             alt="Dark glass LUXÉOL hair repair serum bottle lit in a charcoal studio"
             width={1920}
             height={1088}
-            className="h-full w-full scale-105 object-cover md:translate-x-[20%]"
+            className="h-full w-full scale-125 object-cover md:translate-x-[18%]"
           />
         </div>
         <div className="absolute inset-0 z-0 bg-[linear-gradient(to_right,rgba(12,12,12,0.96)_0%,rgba(12,12,12,0.85)_32%,rgba(12,12,12,0.25)_58%,transparent_78%)]" />

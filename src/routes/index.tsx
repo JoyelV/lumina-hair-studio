@@ -62,38 +62,41 @@ function Index() {
       </nav>
 
       {/* Hero */}
-      <section className="relative flex h-screen flex-col items-center justify-end overflow-hidden px-8 pb-28">
+      <section className="relative flex h-screen items-center overflow-hidden">
         <div className="animate-light absolute inset-0 z-0">
           <img
             src={heroSerum}
             alt="Dark glass LUXÉOL hair repair serum bottle lit in a charcoal studio"
             width={1920}
             height={1088}
-            className="h-full w-full object-cover object-top"
+            className="h-full w-full scale-105 object-cover md:translate-x-[20%]"
           />
         </div>
-        <div className="absolute inset-x-0 bottom-0 z-0 h-[70%] bg-[linear-gradient(to_top,rgba(12,12,12,0.97)_18%,rgba(12,12,12,0.75)_45%,transparent_100%)]" />
+        <div className="absolute inset-0 z-0 bg-[linear-gradient(to_right,rgba(12,12,12,0.96)_0%,rgba(12,12,12,0.85)_32%,rgba(12,12,12,0.25)_58%,transparent_78%)]" />
 
-        <div className="animate-reveal relative z-10 space-y-8 text-center">
-          <div className="space-y-3">
-            <p className="font-mono text-[10px] uppercase tracking-[0.4em] text-accent">
-              Molecular Repair
+        <div className="animate-reveal relative z-10 mx-auto w-full max-w-[1440px] px-8 md:px-16">
+          <div className="max-w-xl space-y-10">
+            <div className="space-y-4">
+              <p className="font-mono text-[10px] uppercase tracking-[0.4em] text-accent">
+                Molecular Repair
+              </p>
+              <h1 className="font-display text-6xl font-light italic leading-[0.95] text-balance md:text-8xl">
+                The Genesis Serum
+              </h1>
+            </div>
+            <p className="max-w-[42ch] text-sm font-light leading-relaxed text-foreground/60 text-pretty md:text-base">
+              A biological intervention for cellular hair restoration. Engineered to reconstruct
+              disulfide bonds at the cortex level.
             </p>
-            <h1 className="font-display text-6xl font-light italic text-balance md:text-8xl">
-              The Genesis Serum
-            </h1>
+            <a
+              href="#acquire"
+              className="inline-block border border-border px-10 py-4 text-[10px] uppercase tracking-[0.3em] transition-colors duration-500 hover:border-accent hover:text-accent"
+            >
+              Secure Allocation
+            </a>
           </div>
-          <p className="mx-auto max-w-[42ch] text-sm font-light leading-relaxed text-foreground/60 text-pretty md:text-base">
-            A biological intervention for cellular hair restoration. Engineered to reconstruct
-            disulfide bonds at the cortex level.
-          </p>
-          <a
-            href="#acquire"
-            className="inline-block border border-border px-10 py-4 text-[10px] uppercase tracking-[0.3em] transition-colors duration-500 hover:border-accent hover:text-accent"
-          >
-            Secure Allocation
-          </a>
         </div>
+
 
 
         <div className="absolute bottom-12 left-1/2 h-12 w-px -translate-x-1/2 bg-foreground/20" />

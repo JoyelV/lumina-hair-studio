@@ -67,6 +67,11 @@
   --ring: oklch(0.735 0.058 71);
 }
 
+@theme {
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-cinematic: cubic-bezier(0.22, 0.61, 0.19, 1);
+}
+
 @keyframes reveal-up {
   from {
     opacity: 0;
@@ -75,6 +80,24 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes reveal-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rule-extend {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
   }
 }
 
@@ -90,13 +113,58 @@
   }
 }
 
+@keyframes scroll-pulse {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  45% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  55% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+
 @utility animate-reveal {
-  animation: reveal-up 1.2s var(--ease-out-expo) both;
+  animation: reveal-up 1.4s var(--ease-out-expo) both;
+}
+
+@utility animate-fade-slow {
+  animation: reveal-fade 2.4s var(--ease-cinematic) both;
+}
+
+@utility animate-rule {
+  animation: rule-extend 1.6s var(--ease-out-expo) both;
+  transform-origin: left;
 }
 
 @utility animate-light {
-  animation: light-drift 14s ease-in-out infinite;
+  animation: light-drift 18s ease-in-out infinite;
 }
+
+@utility animate-scroll-pulse {
+  animation: scroll-pulse 3.2s var(--ease-cinematic) infinite;
+}
+
+/* Fine film grain — keeps the render from looking flat/CGI */
+@utility grain-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-light,
+  .animate-scroll-pulse {
+    animation: none;
+  }
+}
+
 
 @layer base {
   * {
